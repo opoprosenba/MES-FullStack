@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#BDBDBD;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#E0E0E0;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="firewallGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F44336;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#EF9A9A;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="lbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#FFCC80;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="appGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#64B5F6;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#8BC34A;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="cacheGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9C27B0;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#CE93D8;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <text x="450" y="30" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#333">MES制造执行系统网络拓扑图（生产环境）</text>
+
+  <rect x="200" y="50" width="500" height="60" rx="30" ry="30" fill="url(#cloudGrad)" filter="url(#shadow)"/>
+  <text x="450" y="85" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Internet</text>
+
+  <line x1="450" y="110" x2="450" y="140" stroke="#666" stroke-width="3"/>
+
+  <rect x="380" y="150" width="140" height="60" rx="8" ry="8" fill="url(#firewallGrad)" filter="url(#shadow)"/>
+  <text x="450" y="172" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">防火墙</text>
+  <text x="450" y="188" font-family="Microsoft YaHei, sans-serif" font-size="10" text-anchor="middle" fill="white">仅开放80/443端口</text>
+
+  <line x1="450" y="210" x2="450" y="240" stroke="#666" stroke-width="3"/>
+
+  <rect x="350" y="250" width="200" height="70" rx="8" ry="8" fill="url(#lbGrad)" filter="url(#shadow)"/>
+  <text x="450" y="278" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">负载均衡器 (Nginx)</text>
+  <text x="450" y="298" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="white">HTTP:80 | HTTPS:443</text>
+
+  <line x1="450" y="320" x2="450" y="350" stroke="#666" stroke-width="3"/>
+
+  <rect x="50" y="360" width="800" height="200" rx="15" ry="15" fill="#E3F2FD" stroke="#90CAF9" stroke-width="2"/>
+  <text x="450" y="385" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1976D2">内部网络 (Intranet)</text>
+
+  <rect x="100" y="410" width="180" height="90" rx="8" ry="8" fill="url(#appGrad)" filter="url(#shadow)"/>
+  <text x="190" y="438" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">应用服务器1</text>
+  <text x="190" y="458" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="white">Spring Boot :9090</text>
+  <text x="190" y="478" font-family="Microsoft YaHei, sans-serif" font-size="10" text-anchor="middle" fill="white">8核16G | SSD 200G</text>
+
+  <rect x="300" y="410" width="180" height="90" rx="8" ry="8" fill="url(#appGrad)" filter="url(#shadow)"/>
+  <text x="390" y="438" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">应用服务器2</text>
+  <text x="390" y="458" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="white">Spring Boot :9090</text>
+  <text x="390" y="478" font-family="Microsoft YaHei, sans-serif" font-size="10" text-anchor="middle" fill="white">8核16G | SSD 200G</text>
+
+  <rect x="500" y="410" width="180" height="90" rx="8" ry="8" fill="url(#dbGrad)" filter="url(#shadow)"/>
+  <text x="590" y="438" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">数据库主库</text>
+  <text x="590" y="458" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="white">MySQL :3306</text>
+  <text x="590" y="478" font-family="Microsoft YaHei, sans-serif" font-size="10" text-anchor="middle" fill="white">8核32G | SSD 500G</text>
+
+  <rect x="700" y="410" width="180" height="90" rx="8" ry="8" fill="url(#dbGrad)" filter="url(#shadow)"/>
+  <text x="790" y="438" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">数据库从库</text>
+  <text x="790" y="458" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="white">MySQL :3307</text>
+  <text x="790" y="478" font-family="Microsoft YaHei, sans-serif" font-size="10" text-anchor="middle" fill="white">8核32G | SSD 500G</text>
+
+  <line x1="500" y="455" x2="700" y="455" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="600" y="450" font-family="Microsoft YaHei, sans-serif" font-size="10" text-anchor="middle" fill="#333">主从复制</text>
+
+  <line x1="450" y="360" x2="450" y="410" stroke="#666" stroke-width="3"/>
+  <line x1="450" y="375" x2="190" y="410" stroke="#666" stroke-width="2"/>
+  <line x1="450" y="375" x2="390" y="410" stroke="#666" stroke-width="2"/>
+  <line x1="450" y="375" x2="590" y="410" stroke="#666" stroke-width="2"/>
+  <line x1="450" y="375" x2="790" y="410" stroke="#666" stroke-width="2"/>
+
+  <rect x="50" y="570" width="280" height="25" rx="5" ry="5" fill="url(#cacheGrad)" filter="url(#shadow)"/>
+  <text x="190" y="588" font-family="Microsoft YaHei, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">缓存服务器: Redis :6379</text>
+
+  <rect x="350" y="570" width="280" height="25" rx="5" ry="5" fill="#FFC107" filter="url(#shadow)"/>
+  <text x="490" y="588" font-family="Microsoft YaHei, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">备份服务器: HDD 1T</text>
+
+  <rect x="650" y="570" width="200" height="25" rx="5" ry="5" fill="#E91E63" filter="url(#shadow)"/>
+  <text x="750" y="588" font-family="Microsoft YaHei, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">堡垒机: VPN接入</text>
+
+  <line x1="190" y="570" x2="390" y="460" stroke="#9C27B0" stroke-width="2"/>
+  <line x1="490" y="570" x2="590" y="500" stroke="#FFC107" stroke-width="2"/>
+
+</svg>

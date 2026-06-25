@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="sysGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E91E63;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#F48FB1;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="baseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#64B5F6;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="techGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFB74D;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="orderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8BC34A;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="digitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9C27B0;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#CE93D8;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <text x="600" y="30" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">MES制造执行系统数据库ER图</text>
+
+  <rect x="30" y="60" width="340" height="280" rx="10" ry="10" fill="url(#sysGrad)" filter="url(#shadow)"/>
+  <text x="200" y="88" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">系统管理模块</text>
+
+  <rect x="50" y="110" width="130" height="70" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="115" y="130" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_sys_user</text>
+  <text x="115" y="145" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">用户表</text>
+  <text x="115" y="160" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#888">id, username, password</text>
+
+  <rect x="200" y="110" width="130" height="70" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="265" y="130" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_sys_role</text>
+  <text x="265" y="145" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">角色表</text>
+  <text x="265" y="160" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#888">id, role_name, role_code</text>
+
+  <rect x="50" y="195" width="130" height="70" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="115" y="215" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_sys_menu</text>
+  <text x="115" y="230" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">菜单表</text>
+  <text x="115" y="245" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#888">id, menu_name, parent_id</text>
+
+  <rect x="200" y="195" width="130" height="70" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="265" y="215" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_sys_dept</text>
+  <text x="265" y="230" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">部门表</text>
+  <text x="265" y="245" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#888">id, dept_name, parent_id</text>
+
+  <rect x="50" y="280" width="130" height="50" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="115" y="298" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_sys_user_role</text>
+  <text x="115" y="314" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">用户角色关联</text>
+
+  <rect x="200" y="280" width="130" height="50" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="265" y="298" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_sys_role_menu</text>
+  <text x="265" y="314" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">角色菜单关联</text>
+
+  <line x1="130" y1="155" x2="200" y2="200" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="130" y1="180" x2="200" y2="225" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="180" y1="180" x2="180" y2="210" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="390" y="60" width="340" height="280" rx="10" ry="10" fill="url(#baseGrad)" filter="url(#shadow)"/>
+  <text x="560" y="88" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">基础数据模块</text>
+
+  <rect x="410" y="110" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="470" y="128" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_materile</text>
+  <text x="470" y="144" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">物料表</text>
+
+  <rect x="550" y="110" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="610" y="128" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_parts</text>
+  <text x="610" y="144" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">零部件表</text>
+
+  <rect x="690" y="110" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="750" y="128" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_parts_category</text>
+  <text x="750" y="144" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">零部件分类</text>
+
+  <rect x="410" y="185" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="470" y="203" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_warehouse</text>
+  <text x="470" y="219" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">库房表</text>
+
+  <rect x="550" y="185" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="610" y="203" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_warehouse_location</text>
+  <text x="610" y="219" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">库位表</text>
+
+  <rect x="690" y="185" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="750" y="203" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_process_unit</text>
+  <text x="750" y="219" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">加工单元表</text>
+
+  <rect x="410" y="260" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="470" y="278" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_equipment_group</text>
+  <text x="470" y="294" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">设备编组表</text>
+
+  <rect x="550" y="260" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="610" y="278" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_group_equipment_rel</text>
+  <text x="610" y="294" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">编组设备关联</text>
+
+  <rect x="690" y="260" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="750" y="278" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_process_unit_team</text>
+  <text x="750" y="294" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">单元班组关联</text>
+
+  <line x1="460" y1="150" x2="550" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="460" y1="225" x2="550" y2="225" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="460" y1="300" x2="550" y2="300" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="750" y="60" width="340" height="280" rx="10" ry="10" fill="url(#techGrad)" filter="url(#shadow)"/>
+  <text x="920" y="88" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">工艺管理模块</text>
+
+  <rect x="770" y="110" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="830" y="128" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_product_bom</text>
+  <text x="830" y="144" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">产品BOM表</text>
+
+  <rect x="910" y="110" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="970" y="128" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_product_bom_node</text>
+  <text x="970" y="144" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">BOM节点表</text>
+
+  <rect x="1050" y="110" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="1110" y="128" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_product_bom_item</text>
+  <text x="1110" y="144" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">BOM物料清单</text>
+
+  <rect x="770" y="185" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="830" y="203" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_oper</text>
+  <text x="830" y="219" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">工序表</text>
+
+  <rect x="910" y="185" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="970" y="203" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_flow</text>
+  <text x="970" y="219" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">流程图</text>
+
+  <rect x="1050" y="185" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="1110" y="203" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_flow_oper_relation</text>
+  <text x="1110" y="219" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">流程工序关联</text>
+
+  <rect x="770" y="260" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="830" y="278" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_process_content</text>
+  <text x="830" y="294" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">工艺内容表</text>
+
+  <rect x="910" y="260" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="970" y="278" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_process_detail</text>
+  <text x="970" y="294" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">工艺详情表</text>
+
+  <rect x="1050" y="260" width="120" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="1110" y="278" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_process_document</text>
+  <text x="1110" y="294" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">工艺文档表</text>
+
+  <line x1="820" y1="150" x2="910" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="820" y1="225" x2="910" y2="225" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="820" y1="300" x2="910" y2="300" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="30" y="360" width="340" height="200" rx="10" ry="10" fill="url(#orderGrad)" filter="url(#shadow)"/>
+  <text x="200" y="388" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">生产订单模块</text>
+
+  <rect x="50" y="410" width="130" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="115" y="428" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_order</text>
+  <text x="115" y="444" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">生产订单表</text>
+
+  <rect x="200" y="410" width="130" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="265" y="428" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_line</text>
+  <text x="265" y="444" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">生产线表</text>
+
+  <rect x="50" y="485" width="280" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="190" y="503" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_device / sp_device_group / sp_device_group_item</text>
+  <text x="190" y="519" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">设备管理相关表</text>
+
+  <rect x="390" y="360" width="340" height="200" rx="10" ry="10" fill="url(#digitGrad)" filter="url(#shadow)"/>
+  <text x="560" y="388" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">数字化平台模块</text>
+
+  <rect x="410" y="410" width="130" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="475" y="428" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_bom / sp_bom_flow</text>
+  <text x="475" y="444" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">BOM相关表</text>
+
+  <rect x="560" y="410" width="130" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="625" y="428" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_table_manager</text>
+  <text x="625" y="444" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">表结构管理</text>
+
+  <rect x="410" y="485" width="280" height="60" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="550" y="503" font-family="Microsoft YaHei, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">sp_workflow_definition / sp_workflow_instance / sp_workflow_task</text>
+  <text x="550" y="519" font-family="Microsoft YaHei, sans-serif" font-size="9" text-anchor="middle" fill="#666">工作流相关表</text>
+
+  <rect x="750" y="360" width="400" height="200" rx="10" ry="10" fill="#E0E0E0" filter="url(#shadow)"/>
+  <text x="950" y="388" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">其他表</text>
+
+  <rect x="770" y="410" width="140" height="50" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="840" y="428" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_team / sp_team_user</text>
+  <text x="840" y="444" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">班组员工相关</text>
+
+  <rect x="930" y="410" width="140" height="50" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="1000" y="428" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_component / sp_factroy</text>
+  <text x="1000" y="444" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">组件/工厂表</text>
+
+  <rect x="1090" y="410" width="140" height="50" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="1160" y="428" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_work_shop / sp_location</text>
+  <text x="1160" y="444" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">车间/位置表</text>
+
+  <rect x="770" y="475" width="560" height="50" rx="5" ry="5" fill="white" opacity="0.95"/>
+  <text x="1050" y="493" font-family="Microsoft YaHei, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">sp_sys_dict / sp_process_equipment / sp_process_bak / sp_parts_bak / sp_location_bak</text>
+  <text x="1050" y="509" font-family="Microsoft YaHei, sans-serif" font-size="8" text-anchor="middle" fill="#666">字典/工艺设备/备份表等</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

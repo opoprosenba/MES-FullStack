@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="startGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#8BC34A;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="step1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#64B5F6;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="step2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#FFB74D;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="step3Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9C27B0;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#CE93D8;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="step4Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00BCD4;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#4DD0E1;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="endGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F44336;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#EF9A9A;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">工艺内容编制流程图（五步向导）</text>
+
+  <circle cx="100" cy="100" r="30" fill="url(#startGrad)" filter="url(#shadow)"/>
+  <text x="100" y="105" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">开始</text>
+
+  <line x1="130" y="100" x2="180" y="100" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="200" y="65" width="180" height="70" rx="8" ry="8" fill="url(#step1Grad)" filter="url(#shadow)"/>
+  <text x="290" y="93" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">步骤1：主信息</text>
+  <text x="290" y="113" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="white">工艺名称、关联BOM、关联流程</text>
+
+  <line x1="380" y="100" x2="430" y="100" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="450" y="65" width="180" height="70" rx="8" ry="8" fill="url(#step2Grad)" filter="url(#shadow)"/>
+  <text x="540" y="93" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">步骤2：工序要求</text>
+  <text x="540" y="113" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="white">步骤名称、描述、质量标准、安全要求</text>
+
+  <line x1="630" y="100" x2="680" y="100" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="65" width="160" height="70" rx="8" ry="8" fill="url(#step3Grad)" filter="url(#shadow)"/>
+  <text x="780" y="93" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">步骤3：辅助信息</text>
+  <text x="780" y="113" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="white">图片、PDF文档上传</text>
+
+  <line x1="450" y="135" x2="450" y="180" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="320" y="190" width="260" height="70" rx="8" ry="8" fill="url(#step4Grad)" filter="url(#shadow)"/>
+  <text x="450" y="218" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">步骤4：物料核对</text>
+  <text x="450" y="238" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="white">选择物料、输入数量、确认物料清单</text>
+
+  <line x1="450" y="260" x2="450" y="295" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="320" y="305" width="260" height="70" rx="8" ry="8" fill="#FFC107" filter="url(#shadow)"/>
+  <text x="450" y="333" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">步骤5：完成</text>
+  <text x="450" y="353" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="#333">预览所有信息、确认无误后提交</text>
+
+  <line x1="450" y="375" x2="450" y="410" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <circle cx="450" cy="430" r="35" fill="url(#endGrad)" filter="url(#shadow)"/>
+  <text x="450" y="435" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">工艺编制完成</text>
+
+  <line x1="200" y="100" x2="100" y="200" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="450" y="100" x2="320" y="190" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="700" y="100" x2="580" y="190" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <text x="50" y="160" font-family="Microsoft YaHei, sans-serif" font-size="10" fill="#666">上一步</text>
+  <text x="600" y="160" font-family="Microsoft YaHei, sans-serif" font-size="10" fill="#666">上一步</text>
+  <text x="600" y="250" font-family="Microsoft YaHei, sans-serif" font-size="10" fill="#666">上一步</text>
+
+  <rect x="50" y="220" width="100" height="40" rx="5" ry="5" fill="#E0E0E0"/>
+  <text x="100" y="243" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="#666">每步数据验证</text>
+
+  <rect x="750" y="220" width="130" height="40" rx="5" ry="5" fill="#E0E0E0"/>
+  <text x="815" y="243" font-family="Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="#666">支持回退修改</text>
+
+</svg>
